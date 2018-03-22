@@ -1,9 +1,9 @@
-# outbound
+# Outbound
 Test outbound TCP port filtering
 
 ## Simple PowerShell script to test TCP port connections to allports.exposed to identify any outbound filtering.
 
-Usage: 
+### Usage: 
 
 Scan all ports 1-1023:   *outbound.ps1 -ports (1..1023)*
 
