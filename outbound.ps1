@@ -9,7 +9,7 @@
 [string] $testhost = "allports.exposed"
 
 if (Test-Connection -Count 1 $testhost -Quiet) {
-    Write-Host "DNS Translation is working`n" -ForegroundColor Green
+    Write-Host "DNS Resolution is working`n" -ForegroundColor Green
 }
 else {
     Write-Host "DNS Translation failed`n" -ForegroundColor Red
@@ -29,6 +29,6 @@ Foreach ($p in $ports)
         $Socket.Close()
     }
     else {
-        Write-Host "Outbound port $p is closed or filtered."
+        Write-Host "Outbound port $p is closed or filtered." -ForegroundColor Red
     }
 } #end foreach
